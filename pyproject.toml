@@ -6,6 +6,9 @@ description = "Layen Python for ML"
 license = { file = "LICENSE" }
 readme = "docs/README.md"
 requires-python = ">=3.13"
+dependencies = [
+    "ipykernel>=6.29.5",
+]
 
 [dependency-groups]
 dev = ["invoke>=2.2.0"]
