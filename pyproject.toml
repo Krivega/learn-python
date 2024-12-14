@@ -1,41 +1,24 @@
 [project]
 name = "learn_python"
 version = "0.1.0"
-authors = [
-    { name = "Krivega Dmitriy", email = "mr.krivega@gmail.com" },
-]
+authors = [{ name = "Krivega Dmitriy", email = "mr.krivega@gmail.com" }]
 description = "Layen Python for ML"
-license = {file = "LICENSE"}
+license = { file = "LICENSE" }
 readme = "docs/README.md"
 requires-python = ">=3.13"
 
 [dependency-groups]
-dev = [
-    "invoke>=2.2.0",
-]
+dev = ["invoke>=2.2.0"]
 test = [
     "coverage[toml]>=7.6.7",
     "pytest>=8.3.3",
     "pytest-cov>=6.0.0",
     "pytest-mock>=3.14.0",
 ]
-style = [
-    "mypy>=1.13.0",
-    "ruff>=0.7.4",
-]
-security = [
-    "bandit>=1.7.10",
-    "pip-audit>=2.7.3",
-]
-git = [
-    "commitizen>=3.31.0",
-    "pre-commit>=4.0.1",
-]
-doc = [
-    "mkdocs>=1.6.1",
-    "mkdocs-material>=9.5.45",
-]
-
+style = ["mypy>=1.13.0", "ruff>=0.8.3"]
+security = ["bandit>=1.7.10", "pip-audit>=2.7.3"]
+git = ["commitizen>=3.31.0", "pre-commit>=4.0.1"]
+doc = ["mkdocs>=1.6.1", "mkdocs-material>=9.5.45"]
 
 
 [tool.commitizen]
@@ -87,6 +70,8 @@ known-first-party = ["tests"]
 [tool.ruff.lint.pydocstyle]
 convention = "google"
 
+[tool.ruff.format]
+quote-style = "single"
 
 [tool.pytest.ini_options]
 minversion = "8.0.0"
