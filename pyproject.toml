@@ -6,9 +6,7 @@ description = "Layen Python for ML"
 license = { file = "LICENSE" }
 readme = "docs/README.md"
 requires-python = ">=3.13"
-dependencies = [
-    "ipykernel>=6.29.5",
-]
+dependencies = ["ipykernel>=6.29.5"]
 
 [dependency-groups]
 dev = ["invoke>=2.2.0"]
@@ -32,7 +30,7 @@ version_files = ["pyproject.toml:version"]
 
 
 [tool.mypy]
-files = ["learn_python", "tests"]
+files = ["src", "tests"]
 ignore_missing_imports = true
 follow_imports = "silent"
 warn_redundant_casts = true
