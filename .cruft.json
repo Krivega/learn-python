@@ -25,7 +25,7 @@
       "_setup_uv_version": "v3",
       "_package_versions": {
         "invoke": "2.2.0",
-        "pytest": "8.3.3",
+        "pytest": "8.3.4",
         "coverage": "7.6.7",
         "pytest_cov": "6.0.0",
         "pytest_mock": "3.14.0",

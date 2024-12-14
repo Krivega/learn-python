@@ -524,7 +524,7 @@ style = [
 ]
 test = [
     { name = "coverage", extras = ["toml"], specifier = ">=7.6.7" },
-    { name = "pytest", specifier = ">=8.3.3" },
+    { name = "pytest", specifier = ">=8.3.4" },
     { name = "pytest-cov", specifier = ">=6.0.0" },
     { name = "pytest-mock", specifier = ">=3.14.0" },
 ]

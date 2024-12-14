@@ -12,7 +12,7 @@ dependencies = ["ipykernel>=6.29.5"]
 dev = ["invoke>=2.2.0"]
 test = [
     "coverage[toml]>=7.6.7",
-    "pytest>=8.3.3",
+    "pytest>=8.3.4",
     "pytest-cov>=6.0.0",
     "pytest-mock>=3.14.0",
 ]
@@ -30,7 +30,7 @@ version_files = ["pyproject.toml:version"]
 
 
 [tool.mypy]
-files = ["src", "tests"]
+files = ["src"]
 ignore_missing_imports = true
 follow_imports = "silent"
 warn_redundant_casts = true
@@ -66,7 +66,7 @@ ignore = ["E501", "D1", "D415"]
 [tool.ruff.lint.isort]
 required-imports = ["from __future__ import annotations"]
 combine-as-imports = true
-known-first-party = ["tests"]
+known-first-party = ["__tests__"]
 
 [tool.ruff.lint.pydocstyle]
 convention = "google"
@@ -76,7 +76,7 @@ quote-style = "single"
 
 [tool.pytest.ini_options]
 minversion = "8.0.0"
-testpaths = "tests"
+testpaths = "src/**/__tests__"
 addopts = "--strict-markers"
 norecursedirs = [
     ".*",
@@ -111,4 +111,4 @@ exclude_lines = [
     'if 0:',
     'if __name__ == .__main__.:',
 ]
-omit = ['env/*', 'venv/*', '*/virtualenv/*', '*/virtualenvs/*', '*/tests/*']
+omit = ['env/*', 'venv/*', '*/virtualenv/*', '*/virtualenvs/*', '*/__tests__/*']
