@@ -9,7 +9,7 @@ def validate(value):
         return False
 
 
-romeDic = (('I', 'V', 'X'), ('X', 'L', 'C'), ('C', 'D', 'M'), ('M', '', ''))
+ROME_DIC = (('I', 'V', 'X'), ('X', 'L', 'C'), ('C', 'D', 'M'), ('M', '', ''))
 
 
 def task(value):
@@ -18,7 +18,7 @@ def task(value):
 
     for i in range(size):
         discharge = size - 1 - i
-        romeDicByDischarge = romeDic[i]
+        romeDicByDischarge = ROME_DIC[i]
         item = int(value[discharge])
 
         if item == 0:
