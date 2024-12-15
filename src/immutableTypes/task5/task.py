@@ -18,11 +18,10 @@ def task(value):
 
     for char in value:
         isDot = char == '.'
-        isLastChar = char == value[-1]
         if not isDot and char not in NUMBERS:
             isValid = False
             break
-        elif isDot and (countDots > 0 or isLastChar):
+        elif isDot and (countDots > 0):
             isValid = False
             break
         elif isDot:

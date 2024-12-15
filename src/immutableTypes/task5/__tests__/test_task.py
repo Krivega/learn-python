@@ -8,3 +8,5 @@ def test_function():
     assert task('.78') is True
     assert task('.67.') is False
     assert task('5') is True
+    assert task('-5') is False
+    assert task('5.') is True
