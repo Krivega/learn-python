@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 
-def validate(value):
+def validate(value: str):
     try:
         isValidByType = isinstance(int(value), int)
         return isValidByType
@@ -9,7 +9,7 @@ def validate(value):
         return False
 
 
-def task(value):
+def task(value: int):
     result = value % 5 if value > 5 else 0
 
     return result

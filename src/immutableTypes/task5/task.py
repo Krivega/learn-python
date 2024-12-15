@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 
-def validate(value):
+def validate(value: str):
     try:
         isValidBySize = len(value) > 0
         return isValidBySize
@@ -12,7 +12,7 @@ def validate(value):
 NUMBERS = frozenset('0123456789')
 
 
-def task(value):
+def task(value: str):
     isValid = True
     countDots = 0
 

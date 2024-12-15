@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 
-def validate(value):
+def validate(value: str):
     try:
         isValidByLen = len(value) == 3
         isValidByType = all(isinstance(int(item), int) for item in value)
@@ -10,7 +10,7 @@ def validate(value):
         return False
 
 
-def task(width, height, targetSize):
+def task(width: int, height: int, targetSize: int):
     square = width * height
     isAvailableBySquare = targetSize <= square
     if not isAvailableBySquare:

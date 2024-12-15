@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 
-def validate(value):
+def validate(value: str):
     try:
         isValidByType = isinstance(int(value), int)
         return isValidByType
@@ -12,7 +12,7 @@ def validate(value):
 ROME_DIC = (('I', 'V', 'X'), ('X', 'L', 'C'), ('C', 'D', 'M'), ('M', '', ''))
 
 
-def task(value):
+def task(value: str):
     result = ''
     size = len(value)
 

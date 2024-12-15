@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 
-def validate(value):
+def validate(value: str):
     try:
         isValidByLen = len(value) == 5
         isValidByType = isinstance(int(value), int)
@@ -10,7 +10,7 @@ def validate(value):
         return False
 
 
-def task(value):
+def task(value: str):
     firstPart = value[0]
     middlePart = value[1:-1]
     lastPart = value[-1]
