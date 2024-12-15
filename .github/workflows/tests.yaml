@@ -1,0 +1,31 @@
+name: Python package
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v4
+
+      - name: Set up Python
+        run: uv python install
+
+      # You can test your matrix by printing the current Python version
+      - name: Display Python version
+        run: python -c "import sys; print(sys.version)"
+
+      - name: Install dependencies
+        run: uv sync --all-extras --dev
+
+      - name: Test with pytest
+        run: uvx pytest --doctest-modules --junitxml=junit/test-results.xml
+
+      - name: Check code formatting with Ruff
+        run: uvx ruff format --diff --target-version=py39
+        continue-on-error: true

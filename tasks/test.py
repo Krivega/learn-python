@@ -9,7 +9,7 @@ from tasks.common import VENV_PREFIX
 @task(default=True)
 def run(ctx: Context, allow_no_tests: bool = False) -> None:
     """Run test cases"""
-    result = ctx.run(f"{VENV_PREFIX} pytest", pty=True, warn=True)
+    result = ctx.run(f'{VENV_PREFIX} pytest', pty=True, warn=True)
     if allow_no_tests and result.exited == 5:
         exit(0)
     exit(result.exited)
@@ -18,4 +18,4 @@ def run(ctx: Context, allow_no_tests: bool = False) -> None:
 @task
 def cov(ctx: Context) -> None:
     """Run test coverage check"""
-    ctx.run(f"{VENV_PREFIX} pytest --cov=learn_python tests/", pty=True)
+    ctx.run(f'{VENV_PREFIX} pytest --cov=learn_python tests/', pty=True)

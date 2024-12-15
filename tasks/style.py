@@ -9,21 +9,21 @@ from tasks.common import COMMON_TARGETS_AS_STR, VENV_PREFIX
 @task
 def ruff(ctx: Context, fix: bool = True) -> None:
     """Check style through ruff"""
-    arguments = " --fix" if fix else ""
-    ctx.run(f"{VENV_PREFIX} ruff check {COMMON_TARGETS_AS_STR} {arguments}")
+    arguments = ' --fix' if fix else ''
+    ctx.run(f'{VENV_PREFIX} ruff check {COMMON_TARGETS_AS_STR} {arguments}')
 
 
 @task
 def mypy(ctx: Context) -> None:
     """Check style through mypy"""
-    ctx.run(f"{VENV_PREFIX} mypy")
+    ctx.run(f'{VENV_PREFIX} mypy')
 
 
 @task
-def commit_check(ctx: Context, remote: str = "origin") -> None:
+def commit_check(ctx: Context, remote: str = 'origin') -> None:
     """Check commit message through commitizen"""
     ctx.run(
-        f"{VENV_PREFIX} cz -nr 3 check --rev-range {remote}/main..",
+        f'{VENV_PREFIX} cz -nr 3 check --rev-range {remote}/main..',
         warn=True,
     )
 
@@ -37,7 +37,7 @@ def run(ctx: Context) -> None:
 @task
 def ruff_format(ctx: Context) -> None:
     """Format Python code through ruff"""
-    ctx.run(f"{VENV_PREFIX} ruff format {COMMON_TARGETS_AS_STR}")
+    ctx.run(f'{VENV_PREFIX} ruff format {COMMON_TARGETS_AS_STR}')
 
 
 @task(pre=[ruff_format])
