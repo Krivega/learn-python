@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from enum import Enum
+
 
 def camelToSnakeCase(inputValue: str) -> str:
     result = ''
@@ -20,7 +22,13 @@ def snakeToCamelCase(inputValue: str) -> str:
     return result
 
 
-def task(inputValue: str, direction: str = 'auto') -> str:
+class Direction(Enum):
+    auto = 'auto'
+    snake = 'snake'
+    camel = 'camel'
+
+
+def task(inputValue: str, direction: Direction = 'auto') -> str:
     if len(inputValue) == 0:
         return inputValue
 
