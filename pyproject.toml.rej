@@ -1,0 +1,54 @@
+diff a/pyproject.toml b/pyproject.toml	(rejected hunks)
+@@ -7,37 +7,44 @@ authors = [
+ description = "Layen Python for ML"
+ license = {file = "LICENSE"}
+ readme = "docs/README.md"
+-requires-python = ">=3.13"
++requires-python = ">=3.13,<4.0"
++
++[project.urls]
++Documentation = "https://github.com/Krivega/learn_python/blob/docs/README.md"
++Repository = "https://github.com/Krivega/learn_python"
++Issues = "https://github.com/Krivega/learn_python/issues"
++Changelog = "https://github.com/Krivega/learn_python/blob/main/CHANGELOG.md"
+ 
+ [dependency-groups]
+ dev = [
+     "invoke>=2.2.0",
+ ]
+ test = [
+-    "coverage[toml]>=7.6.7",
+-    "pytest>=8.3.3",
++    "coverage[toml]>=7.6.10",
++    "pytest>=8.3.4",
+     "pytest-cov>=6.0.0",
+     "pytest-mock>=3.14.0",
+ ]
+ style = [
+-    "mypy>=1.13.0",
+-    "ruff>=0.7.4",
++    "mypy>=1.14.1",
++    "ruff>=0.9.2",
+ ]
+ security = [
+-    "bandit>=1.7.10",
++    "bandit>=1.2.2",
+     "pip-audit>=2.7.3",
+ ]
+ git = [
+-    "commitizen>=3.31.0",
++    "commitizen>=4.1.0",
+     "pre-commit>=4.0.1",
+ ]
+ doc = [
+     "mkdocs>=1.6.1",
+-    "mkdocs-material>=9.5.45",
++    "mkdocs-material>=9.5.50",
+ ]
+ 
+ 
+ 
++
+ [tool.commitizen]
+ name = "cz_conventional_commits"
+ version = "0.0.1"
