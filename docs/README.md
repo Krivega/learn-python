@@ -20,4 +20,4 @@ See [Contributing](contributing.md)
 ## Authors
 Krivega Dmitriy <mr.krivega@gmail.com>
 
-Created from [Lee-W/cookiecutter-python-template](https://github.com/Lee-W/cookiecutter-python-template/tree/2.0.0) version 2.0.0
+Created from [Lee-W/cookiecutter-python-template](https://github.com/Lee-W/cookiecutter-python-template/tree/3.0.0) version 3.0.0
